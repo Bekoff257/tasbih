@@ -7,14 +7,14 @@ function VideoPlaylist() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    const apiKey = 'AIzaSyAZmg-v9r3HRM0eMoBXL0DtCEB-F4M5J40'; // Replace with your YouTube Data API key
-    const playlistId = 'PL-11M44Qecu8UAHxSUTUr8IdCjp7DxJJP';
+    const apiKey = 'AIzaSyAZmg-v9r3HRM0eMoBXL0DtCEB-F4M5J40';
+    // const playlistId = 'PL-11M44Qecu8UAHxSUTUr8IdCjp7DxJJP';
 
     axios.get(`https://www.googleapis.com/youtube/v3/playlistItems`, {
       params: {
         part: 'snippet',
         maxResults: 10, 
-        playlistId: playlistId,
+        // playlistId: playlistId,
         key: apiKey,
       },
     })
@@ -35,7 +35,10 @@ function VideoPlaylist() {
       <div className={maruza.video_playlist_container}>
       <div className={maruza.main_maruza}>
       <ul className={maruza.video_list}>
-        {videos.map((video) => (
+        {  
+          videos.length === 0 ? <h1>Hech narsa topilmadi...</h1>
+          :
+          videos.map((video) => (
           <li key={video.snippet.resourceId.videoId} className={maruza.vide_item}>
             <iframe
               title={video.snippet.title}
