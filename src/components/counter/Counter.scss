@@ -1,0 +1,16 @@
+.counter{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px 0 0 10px;
+    background: #fff;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 70px;
+    }
+}

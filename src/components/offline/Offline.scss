@@ -1,0 +1,12 @@
+.offline-message{
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+
+    h1{
+        text-align: center;
+        color: #fff;
+    }
+}

@@ -1,0 +1,57 @@
+.container{
+    padding: 20px;
+}
+
+.navbar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #f1dada;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 2;
+
+    .nav_logo{
+
+       a{
+
+        img{
+            width: 35px;
+            height: 35px;
+        }
+       }
+    }
+}
+
+
+.logo_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+    gap: 0 20px;
+
+    svg{
+        font-size: 25px;
+        color: #000;
+    }
+}
+
+.logo_text{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.settings_sec{
+    display: flex;
+    align-items: center;
+
+    svg{
+        font-size: 25px;
+        color: #000;
+    }
+}

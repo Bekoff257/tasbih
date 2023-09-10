@@ -1,0 +1,162 @@
+.container{
+    padding: 0 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+
+.main{
+    margin-bottom: 100px;
+
+
+    a{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../../assests/images/background.png');
+        text-decoration: none;
+    
+        &:hover .cardOfZikr, .arrow{
+            background-color: blue;
+        }
+        
+        &:hover .arrow{
+            transform: translateX(50%);
+            opacity: 1;
+            background: none;
+        }
+    
+        img{
+            width: 200px;
+            height: 200px;
+        }
+
+        .cardOfZikr{
+            margin-top: 20px;
+            color: #fff;
+            letter-spacing: 1px;
+            width: auto;
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 20px;
+            transition: 0.3s;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('../../assests/images/skyback.png');
+            height: auto;
+            background-color: orange;
+            // background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+        }
+    }
+}
+
+.go_link{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    .arrow{
+        transition: 0.2s;
+        opacity: 0;
+        transform: translateX(0%);
+    }
+}
+
+.times_co{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    .weather{
+        color: #fff;
+        padding: 15px;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+        border-radius: 15px;
+        width: 100%;
+        min-height: 180px;
+    }
+
+    .time{
+        color: #fff;
+        width: 100%;
+        border-radius: 15px;
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        padding: 15px;
+        min-height: 180px;
+    }
+}
+
+.weather{
+    
+    .group_weather{
+        padding-top: 10px;
+
+        p{
+            white-space: nowrap;
+        }
+    }
+}
+
+.time{
+
+    h2{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 18px;
+        padding-top: 20px;
+    }
+}
+
+
+.namaz_times{
+    margin-top: 15px;
+    background: #000;
+    border-radius: 20px;
+    padding: 15px;
+    color: #fff;
+
+    ul{
+
+        li{
+            padding-top: 15px;
+            font-size: 18px;
+           display: flex;
+           justify-content: space-between; 
+        }
+    }
+}
+
+.namaz_times {
+
+    .main_namaztext{
+        display: flex;
+        justify-content: space-between;
+
+        p{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 430px){
+    .container{
+        padding: 0 15px;
+    }
+
+    .cardOfZikr {
+        
+        .img_div{
+            display: flex;
+            justify-content: center;
+
+        }
+    }
+}

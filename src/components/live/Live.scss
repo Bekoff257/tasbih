@@ -1,0 +1,23 @@
+.live{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    .live_video{
+        
+        .mecca{
+            margin-top: 20px;
+
+            iframe{
+                padding-top: 10px;
+            }
+        }
+        .medina{
+            margin-top: 20px;
+
+            iframe{
+                padding-top: 10px;
+            }
+        }
+    }
+}

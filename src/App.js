@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Main from './components/main/Main';
+import Maruzalar from './components/maruzalar/Maruzalar';
+import Navbar from './components/nav/Navbar';
+import { Routes, Route } from 'react-router-dom';
+import Zikrs from './components/zikrs/Zikrs';
+import Counter from './components/counter/Counter';
+import Surah from './components/surah/Surah';
+import Settings from './components/settings/Settings';
+import OfflineMessage from './components/offline/Offline';
+import Live from "./components/live/Live"
+import Duolar from './components/duolar/Duolar';
+import Tasbih from './components/tasbih/Tasbih';
 
 function App() {
+  const isOffline = !window.navigator.onLine;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isOffline && <OfflineMessage/>}
+      <Counter />
+      <Navbar/>
+      <Routes>
+        <Route path='/tasbeh' element={<Tasbih />}/>
+        <Route path='/' element={<Main />}/>
+        <Route path='/suralar' element={<Surah />}/>
+        <Route path='/duolar' element={<Duolar />} />
+        <Route path='/maruzalar' element={<Maruzalar/>} />
+        <Route path='/zikrs' element={<Zikrs />}> 
+          <Route path='/zikrs/zikr:id' element={<Counter />} />
+        </Route>
+        <Route path='/settings' element={<Settings />}/>
+        <Route path='/live' element={<Live />}/>
+      </Routes>
     </div>
   );
 }

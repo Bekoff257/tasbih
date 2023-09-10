@@ -1,0 +1,38 @@
+.zikr{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+
+
+    .zikrs{
+        
+        p{
+            margin-top: 30px;
+            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+            border-radius: 10px;
+            padding: 15px 70px;
+            font-size: 35px;
+            text-align: center;
+            white-space: nowrap;
+        }
+    }
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.error_text{
+    margin-top: 50%;
+}
+
+.back{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 10px;
+    text-align: center;
+
+}

@@ -1,0 +1,63 @@
+.tasbih{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+    .ts_co{
+        background: #000;
+        max-height: 300px;
+        color: #fff;
+        padding: 20px;   
+        border-radius: 20px;
+
+        .ds_num{
+            font-size: 25px;
+            text-align: center;
+            background: #fff;
+            color: #000;
+            padding: 2px 5px;
+            min-width: 100px;
+        }
+        .ts_btn{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            align-items: start;
+
+            .dual{
+                border: none;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                cursor: pointer;
+                font-size: 18px;
+                background: #fff;
+                outline: none;
+
+                &:active{
+                    scale: 1.2;
+                }
+            }
+        }
+    }
+}
+
+.ts_btn {
+    position: relative;
+
+    .btn_reset{
+        margin: 5px 0 10px;
+        top: 0;
+        right: 0;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: red;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
