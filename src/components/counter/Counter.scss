@@ -5,10 +5,11 @@
     background: #fff;
     position: fixed;
     right: 0;
-    top: 100px;
+    top: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 
     img{
         width: 70px;

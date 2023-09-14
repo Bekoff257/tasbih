@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useLayoutEffect } from 'react';
 import module from "./Main.module.scss";
 import { Link } from 'react-router-dom';
 import quranLogo from "../../assests/icons/quran.png";
@@ -45,7 +45,7 @@ const Main = () => {
     };
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
       .then(response => {
         setWeather(response.data);
@@ -54,7 +54,7 @@ const Main = () => {
       .catch(err => console.error(err));
   }, [city, apiKey]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     axios.get('https://islomapi.uz/api/present/day?region=Toshkent')
       .then(req => {
         setNamazTime(req.data);

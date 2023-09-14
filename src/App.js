@@ -11,6 +11,7 @@ import OfflineMessage from './components/offline/Offline';
 import Live from "./components/live/Live"
 import Duolar from './components/duolar/Duolar';
 import Tasbih from './components/tasbih/Tasbih';
+import BlogBanner from './components/blog_banner/BlogBanner';
 
 function App() {
   const isOffline = !window.navigator.onLine;
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       {isOffline && <OfflineMessage/>}
+      <BlogBanner />
       <Counter />
       <Navbar/>
       <Routes>
