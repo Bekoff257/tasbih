@@ -70,7 +70,7 @@ const Main = () => {
               <h2>Ob-havo</h2>
               {weather ? (
                 <div className={module.group_weather}>
-                  <p>Tempratura: {weather.main.temp}°C</p>
+                 <p>Tempratura: {Math.round(weather.main.temp - 273.15)}°C</p>
                   <span>Namlik: {weather.main.humidity}%</span>
                 </div>
               ) : (
@@ -142,7 +142,7 @@ const Main = () => {
               </div>
             </Link>
           </div>
-          <div className={module.col-1}>
+          {/* <div className={module.col-1}>
             <Link to="/maruzalar">
               <div className={module.cardOfZikr}>
                 <div className={module.img_div}>
@@ -154,7 +154,7 @@ const Main = () => {
                 </div>
               </div>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
